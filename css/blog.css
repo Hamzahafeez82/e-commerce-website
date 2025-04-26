@@ -1,0 +1,159 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Blog container */
+.blog-container {
+    max-width: 90%;
+    width: 1000px; /* Sets a max readable width */
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    flex: 1;
+}
+
+/* Header styling */
+.blog-header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: transparent;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+
+.blog-header h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Scales between min and max */
+    color: #088178;
+    font-weight: 700;
+}
+
+/* Main content styling */
+.blog-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content h2 {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    color: #0da083;
+    margin: 2rem 0 1rem;
+}
+
+.blog-content p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    margin-bottom: 1.5rem;
+}
+
+.blog-content ol, .blog-content ul {
+    margin: 1.5rem 0 1.5rem 2.5rem;
+}
+
+.blog-content li {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    margin-bottom: 0.75rem;
+}
+
+.blog-content strong {
+    color: #2c3e50;
+}
+
+.blog-content em {
+    color: #7f8c8d;
+}
+
+/* Footer styling */
+.blog-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #2c3e50;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.blog-footer p {
+    font-size: 0.9rem;
+}
+
+.modal-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a .button_link{
+    font-style: none;
+}
+
+/* Small screens (up to 480px, e.g., phones) */
+@media (max-width: 480px) {
+    .blog-nav {
+        padding: 0.75rem;
+    }
+
+    .blog-nav a {
+        display: block;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .blog-container {
+        padding: 1rem 0.5rem;
+    }
+
+    .blog-header {
+        padding: 1.5rem 0;
+    }
+
+    .blog-content {
+        padding: 1rem;
+    }
+
+    .blog-content ol, .blog-content ul {
+        margin-left: 1.5rem;
+    }
+}
+
+/* Medium screens (481px - 768px, e.g., tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .blog-nav a {
+        margin: 0 0.75rem;
+        font-size: 1rem;
+    }
+
+    .blog-container {
+        max-width: 95%;
+    }
+
+    .blog-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Large screens (769px - 1200px, e.g., laptops) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .blog-container {
+        max-width: 90%;
+    }
+}
+
+/* Extra-large screens (above 1200px, e.g., desktops) */
+@media (min-width: 1201px) {
+    .blog-container {
+        max-width: 1000px;
+    }
+}
